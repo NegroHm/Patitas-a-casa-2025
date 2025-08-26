@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 
 import { botones } from '../Nav';
@@ -11,6 +12,7 @@ import { useAuth } from '../../context/AuthContext';
 
 export const BurgerMenu = () => {
   const { isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
   const [login, setLogin] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [modal, setModal] = useState(false);
@@ -42,6 +44,11 @@ export const BurgerMenu = () => {
     console.log(localStorage.getItem('token'));
   };
 
+  const handleReportar = () => {
+    navigate('/reporte');
+    setIsOpen(false); // Cerrar el menú después de navegar
+  };
+
   return (
     <div className={styles.burger_menu}>
       <ul className={`${styles.burger_menu__items} ${isOpen && styles.open}`}>
@@ -61,10 +68,10 @@ export const BurgerMenu = () => {
               >
                 <LogoutIcon />
               </div>
-              <BtnPrincipal texto="Reportar" setModal={setModal} />
+              <BtnPrincipal texto="Reportar" onClick={handleReportar} />
             </div>
           ) : (
-            <BtnPrincipal texto="Iniciar Sesión" setModal={setLogin} />
+            <BtnPrincipal texto="Reportar" onClick={handleReportar} />
           )}
         </li>
       </ul>

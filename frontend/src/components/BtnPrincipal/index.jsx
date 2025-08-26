@@ -1,9 +1,11 @@
 import styles from './styles.module.css';
 import imgPaw from '/icons/paw.png';
 
-export const BtnPrincipal = ({ texto, setModal, action }) => {
-	const handleSetModal = () => {
-		if (texto === texto) {
+export const BtnPrincipal = ({ texto, setModal, onClick, action }) => {
+	const handleClick = () => {
+		if (onClick) {
+			onClick();
+		} else if (setModal) {
 			setModal(true);
 		}
 	};
@@ -14,7 +16,7 @@ export const BtnPrincipal = ({ texto, setModal, action }) => {
 			<img src={imgPaw} className={styles.btn__img} alt="buscador" />
 		</button>
 	) : (
-		<button className={styles.btn} type="button" onClick={handleSetModal}>
+		<button className={styles.btn} type="button" onClick={handleClick}>
 			<p className={styles.btn__text}>{texto}</p>
 			<img src={imgPaw} className={styles.btn__img} alt="buscador" />
 		</button>

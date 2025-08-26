@@ -1,6 +1,6 @@
 // React
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 // Estilos
 import styles from './styles.module.css';
@@ -36,6 +36,7 @@ export const botones = [
 
 export const Navbar = () => {
   const { isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
   const [modal, setModal] = useState(false);
 	const [isScrolling, setScrolling] = useState(false);
 	const [login, setLogin] = useState(false)
@@ -70,6 +71,10 @@ export const Navbar = () => {
     console.log(localStorage.getItem('token'));
   };
 
+  const handleReportar = () => {
+    navigate('/reporte');
+  };
+
   return (
     <nav
       className={`${styles.nav} ${isScrolling ? styles.hidden : ''}`}
@@ -101,15 +106,14 @@ export const Navbar = () => {
           {/* <BtnPrincipal className={styles["nav__boton-reportar"]} texto="Reportar" setModal={setModal} /> */}
           <div className={styles['nav__contenedor-boton']}>
 						{isAuthenticated ? (
-							
 							<div className={styles['nav__contenedor-boton-user']}>
                 <div onClick={handleLogout}>
                 <LogoutIcon />
                 </div>
-								<BtnPrincipal texto="Reportar" setModal={setModal} />
+								<BtnPrincipal texto="Reportar" onClick={handleReportar} />
 							</div>
 							) : (
-              <BtnPrincipal texto="Iniciar Sesión" setModal={setLogin} />
+              <BtnPrincipal texto="Reportar" onClick={handleReportar} />
             )}
           </div>
           <BurgerMenu />

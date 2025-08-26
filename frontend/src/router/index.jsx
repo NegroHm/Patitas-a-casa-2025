@@ -15,6 +15,7 @@ const InformacionRefugio = lazy(() => import("../containers/pages/Refugios/compo
 const Nosotros = lazy(() => import("../containers/pages/Nosotros"))
 const Contacto = lazy(() => import("../containers/pages/Contacto"))
 const Terminos = lazy(() => import("../containers/pages/Terminos"))
+const Reporte = lazy(() => import("../containers/pages/Reporte"))
 const NotFound = lazy(() => import("../containers/errors/NotFound"))
 
 // export const router = createBrowserRouter([
@@ -89,6 +90,7 @@ const AppRouter = () => {
         <Route path="refugios/informacion/:id" element={<InformacionRefugio />} />
         <Route path="encontrados" element={<Encontrados />} />
         <Route path="terminos-y-condiciones" element={<Terminos />} />
+        <Route path="reporte" element={<Reporte />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
