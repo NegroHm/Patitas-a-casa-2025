@@ -1,0 +1,1 @@
+import{j as l}from"./index-b0f687fe.js";import{g as t}from"./styles.module-31cc20f3.js";const o=({texto:s,align:e,clase:r})=>l.jsx("b",{children:l.jsx("p",{className:`${t["letra-titulo"]} ${t[r]}`,style:{textAlign:e},children:s})}),n=({texto:s,align:e,clase:r})=>l.jsx("p",{className:`${t["letra-titulo"]} ${t[r]}`,style:{textAlign:e},children:s});export{o as L,n as a};

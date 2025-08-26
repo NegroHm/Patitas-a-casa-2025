@@ -1,0 +1,1 @@
+import{r as s,d as n}from"./index-b0f687fe.js";import"./styles.module-31cc20f3.js";const p=e=>{const[r,o]=s.useState(),[c,a]=s.useState("");return s.useEffect(()=>{(async()=>{try{const t=await n.get(`/v1/${e}`);o(t.data),a("200")}catch(t){a(t.message||"Error fetching data")}})()},[]),{data:r,status:c}};export{p as u};
