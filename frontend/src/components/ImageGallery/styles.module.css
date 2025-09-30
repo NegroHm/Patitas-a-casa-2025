@@ -192,7 +192,7 @@
   }
   
   .imageGrid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
   
@@ -208,6 +208,10 @@
 }
 
 @media (max-width: 480px) {
+  .galleryContainer {
+    padding: 0.75rem;
+  }
+  
   .imageGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
@@ -217,5 +221,23 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+  
+  .galleryTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .galleryContainer {
+    padding: 0.5rem;
+  }
+  
+  .imageGrid {
+    gap: 0.5rem;
+  }
+  
+  .galleryTitle {
+    font-size: 1.2rem;
   }
 }

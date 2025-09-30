@@ -238,27 +238,34 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .uploadContainer {
-    padding: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
   
   .dropZone {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
   
   .uploadIcon {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
   .dropZoneText {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   
   .uploadActions {
     flex-direction: column;
+    gap: 0.75rem;
   }
   
   .uploadButton {
     min-width: 100%;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .clearButton {
+    padding: 0.8rem 1.2rem;
   }
   
   .fileItem {
@@ -275,18 +282,37 @@
 
 @media (max-width: 480px) {
   .uploadContainer {
-    padding: 1rem;
+    padding: 0.75rem;
+    border-radius: 12px;
   }
   
   .uploadTitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+  
+  .uploadDescription {
+    font-size: 0.9rem;
   }
   
   .dropZone {
-    padding: 1.5rem 1rem;
+    padding: 1.2rem 0.75rem;
+    border-radius: 12px;
   }
   
   .uploadIcon {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .dropZoneText {
+    font-size: 0.85rem;
+  }
+  
+  .dropZoneSubtext {
+    font-size: 0.75rem;
+  }
+  
+  .uploadButton, .clearButton {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
   }
 }

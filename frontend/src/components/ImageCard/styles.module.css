@@ -263,20 +263,21 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .imageCard {
-    margin: 0.5rem;
+    margin: 0;
   }
   
   .imageContainer {
-    height: 360px;
+    height: 280px;
   }
   
   .actionButtons {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 0.5rem;
   }
   
   .downloadButton, .shareButton {
-    font-size: 0.9rem;
-    padding: 1rem;
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
   }
   
   .modal {
@@ -286,16 +287,50 @@
   .fullImage {
     max-height: 60vh;
   }
-}
-
-@media (max-width: 480px) {
-  .imageDetails {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
-  }
   
   .imageName {
     font-size: 0.9rem;
+  }
+  
+  .imageDate {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageCard {
+    border-radius: 12px;
+  }
+  
+  .imageContainer {
+    height: 240px;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .imageInfo {
+    padding: 0.75rem;
+  }
+  
+  .imageName {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .imageDetails {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .actionButtons {
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    gap: 0.4rem;
+  }
+  
+  .downloadButton, .shareButton {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.6rem;
+    border-radius: 6px;
   }
 }
