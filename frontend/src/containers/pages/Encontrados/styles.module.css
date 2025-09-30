@@ -1,6 +1,8 @@
 .perdidos {
 	background-image: url('/icons/imagen\ de\ fondo\ de\ huellas/bg-3.png');
 	background-size: cover;
+	min-height: 100vh;
+	padding: 0 1rem;
 }
 
 .texto-container{
@@ -33,10 +35,11 @@
 /* Gallery Section Styles */
 .gallerySection {
 	background: white;
-	margin: 2rem 0;
+	margin: 2rem auto;
 	padding: 2rem;
 	border-radius: 15px;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+	max-width: 1200px;
 }
 
 .galleryHeader {
@@ -56,7 +59,7 @@
 }
 
 .uploadToggleButton {
-	background: #28a745;
+	background: #DE341D;
 	color: white;
 	border: none;
 	padding: 1rem 1.5rem;
@@ -68,16 +71,33 @@
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
+	box-shadow: 0 2px 6px rgba(222, 52, 29, 0.2);
 }
 
 .uploadToggleButton:hover {
-	background: #218838;
+	background: #B82D1A;
 	transform: translateY(-2px);
-	box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+	box-shadow: 0 6px 20px rgba(222, 52, 29, 0.3);
+}
+
+/* Gallery wrapper for better presentation */
+.galleryWrapper {
+	background: rgba(255, 255, 255, 0.95);
+	margin: 2rem auto;
+	padding: 2rem;
+	border-radius: 20px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	max-width: 1280px;
 }
 
 @media (max-width: 768px) {
 	.gallerySection {
+		margin: 1rem;
+		padding: 1rem;
+	}
+	
+	.galleryWrapper {
 		margin: 1rem;
 		padding: 1rem;
 	}
