@@ -27,7 +27,6 @@ export const botones = [
   { texto: 'Inicio', path: '/' },
   { texto: 'Perdidos', path: '/perdidos' },
   { texto: 'Encontrados', path: '/encontrados' },
-  { texto: 'Adoptar', path: '/adoptar' },
   { texto: 'Blog', path: '/blog' },
   { texto: 'Socios', path: '/socios' },
   { texto: 'Nosotros', path: '/nosotros' },

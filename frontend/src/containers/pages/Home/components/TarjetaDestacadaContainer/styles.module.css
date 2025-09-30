@@ -18,3 +18,154 @@
     grid-template-columns: minmax(0, 1fr); /* Cambia a 1 columna para pantallas aún más pequeñas */
   }
 }
+
+/* Recent Images Styles */
+.recentImagesContainer {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.recentImageCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.recentImageCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.recentImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.recentImageCard:hover .recentImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.recentImageCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.imageType {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.imageInfo {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.imageName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.2;
+}
+
+.imageDate {
+  font-size: 0.75rem;
+  color: #666;
+  margin: 0;
+}
+
+.noImages {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  background: #f9f9f9;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.noImages p {
+  margin: 0.5rem 0;
+}
+
+.noImages p:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .recentImagesContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .recentImagesContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .recentImagesContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .imageWrapper {
+    height: 150px;
+  }
+
+  .imageInfo {
+    padding: 0.5rem;
+  }
+
+  .imageName {
+    font-size: 0.8rem;
+  }
+
+  .imageDate {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .recentImagesContainer {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .imageWrapper {
+    height: 180px;
+  }
+}

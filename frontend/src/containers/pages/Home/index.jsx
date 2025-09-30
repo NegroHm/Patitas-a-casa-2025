@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 
 // Componentes
-import { AdopcionesTarjetaContainer, BtnPrincipal, Formulario, LetraTitulo, Lista } from '../../../components';
+import { BtnPrincipal, Formulario, LetraTitulo, Lista } from '../../../components';
 import TarjetaDestacadaContainer from './components/TarjetaDestacadaContainer';
 import {BlogContainer} from './components/BlogContainer';
 import { LogoWhite } from '../../../components/Icons';
@@ -108,9 +108,6 @@ const Home = () => {
 								<p className={styles.header__title}>"Rescatando patitas, salvando corazones"</p>
 								<div className={styles.header__buttons}>
 									<BtnPrincipal texto="Reportar" setModal={setModal} />
-									<Link to="/adoptar">
-										<BtnPrincipal texto="Adoptar" />
-									</Link>
 								</div>
 							</div>
 						</section>
@@ -127,7 +124,7 @@ const Home = () => {
 									<h2 className={styles["header__info--title"]}>¿Qué hacemos?</h2>
 								</div>
 								<p className={styles["header__info--text"]}>
-									Nos encargamos de difundir, listar y dar mayor visibilidad a mascotas perdidas y en busca de un nuevo hogar
+									Nos encargamos de difundir, listar y dar mayor visibilidad a mascotas perdidas
 								</p>
 							</div>
 						</div>
@@ -174,17 +171,6 @@ const Home = () => {
 
 			<Stats />
 
-			<div className={styles.adopciones}>
-				<LetraTitulo
-					texto="ADOPCIONES"
-					clase="letra-titulo--red"
-					align="center"
-				/>
-				<AdopcionesTarjetaContainer />
-				<Link to="/adoptar" className={styles.header__buttons}>
-					<BtnPrincipal texto="Adoptar" />
-				</Link>
-			</div>
 
 			<section>
 				<LetraTitulo texto="BLOG" clase="letra-titulo--red" align="center" />

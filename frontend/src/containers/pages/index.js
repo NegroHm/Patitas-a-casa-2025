@@ -1,5 +1,4 @@
 export * from './Home'
-export * from './Adoptar'
 export * from './Blog'
 export * from './Blogs'
 export * from './Contacto'

@@ -31,7 +31,7 @@ export const Stats = () => {
           <span>
             <p>Refugios con los que trabajamos</p>
           </span>
-          <p className={styles.stats__number}>+0</p>
+          <p className={styles.stats__number}>+1</p>
         </div>
       </div>
     </>

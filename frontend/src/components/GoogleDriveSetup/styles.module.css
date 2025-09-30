@@ -1,0 +1,196 @@
+.setupContainer {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  max-width: 800px;
+}
+
+.setupHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.setupTitle {
+  color: #856404;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.setupDescription {
+  color: #664d03;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.credentialsInfo {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e5e5e5;
+}
+
+.credentialsInfo h4 {
+  color: #dc3545;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.credentialsList {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.credentialsList li {
+  margin-bottom: 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.credentialsList code {
+  background: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: #e83e8c;
+  font-weight: 500;
+}
+
+.setupSteps {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e5e5e5;
+}
+
+.setupSteps h4 {
+  color: #495057;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.stepsList {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.step {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  color: #495057;
+}
+
+.helpLinks {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e5e5e5;
+}
+
+.helpLinks h4 {
+  color: #495057;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.linksList {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.linksList li {
+  margin-bottom: 0.5rem;
+}
+
+.helpLink {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.helpLink:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.helpLink::before {
+  content: "🔗";
+  font-size: 0.9rem;
+}
+
+.fileExample {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid #e5e5e5;
+}
+
+.fileExample h4 {
+  color: #495057;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.envExample {
+  background: #212529;
+  color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .setupContainer {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .setupTitle {
+    font-size: 1.3rem;
+  }
+  
+  .credentialsInfo,
+  .setupSteps,
+  .helpLinks,
+  .fileExample {
+    padding: 1rem;
+  }
+  
+  .envExample {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .setupContainer {
+    padding: 1rem;
+  }
+  
+  .setupTitle {
+    font-size: 1.2rem;
+  }
+  
+  .stepsList {
+    padding-left: 1rem;
+  }
+  
+  .credentialsList {
+    padding-left: 1rem;
+  }
+}

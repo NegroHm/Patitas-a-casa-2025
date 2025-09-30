@@ -5,10 +5,14 @@ import { PerdidosTarjeta } from '../../../components/PerdidosTarjeta';
 import { useEffect, useState } from "react";
 import useGet from '../../../hooks/services/useGet';
 import { PopupTarjeta } from '../../../components/PopupCard';
+import ImageGallery from '../../../components/ImageGallery';
+import ImageUpload from '../../../components/ImageUpload';
 
 const Perdidos = () => {
 	const { data, status } = useGet("form")
 	const [lostPets, setLostPets] = useState([]);
+	const [showUploadForm, setShowUploadForm] = useState(false);
+	const [galleryKey, setGalleryKey] = useState(0);
 	
 	const [currentPage, setCurrentPage] = useState(1)
 	const [postsPerPage, setPostsPerPage] = useState(10)
@@ -75,6 +79,11 @@ const cerrarPopup = () => {
 	setMostrarPopup(false);
 };
 
+const handleUploadSuccess = () => {
+	setGalleryKey(prev => prev + 1); // Force gallery refresh
+	setShowUploadForm(false);
+};
+
 	return (
 		<>
 			<div className={styles.perdidos}>
@@ -96,33 +105,29 @@ const cerrarPopup = () => {
 						/>
 					</article>
 				</section>
-				<section className={styles.perdidos__tarjeta_container}>
-					{currentPosts.map(
-						({ _id, name, size, loss_date, address, contact, description, image_url }) => {
-							return (
-								<PerdidosTarjeta
-									key={_id}
-									url_img={image_url}
-									contacto={contact}
-									desc={description}
-									fecha={loss_date ? loss_date.split('T')[0] : ''}
-									nombre={name}
-									tam={TranslateSize(size)}
-									zona={address}
-									onOpen={() => abrirPopup(_id)}
-								/>
-							);
-						}
-					)}
-					{mostrarPopup && <PopupTarjeta onClose={cerrarPopup} perdidoData={datosPopup} />}
-				</section>
-				<Paginacion 
-					totalPosts={lostPets.length}
-          postsPerPage={postsPerPage}
-          setCurrentPage={setCurrentPage}
-          currentPage={currentPage}
-          totalPages={totalPages}
+				
+				
+				
+
+			{/* Google Drive Image Gallery */}
+			
+				<div className={styles.galleryHeader}>
+					
+				</div>
+				
+				{showUploadForm && (
+					<ImageUpload 
+						folderType="perdidos" 
+						onUploadSuccess={handleUploadSuccess}
+					/>
+				)}
+				
+				<ImageGallery 
+					key={galleryKey}
+					folderType="perdidos" 
+					title="Imágenes de Mascotas Perdidas"
 				/>
+			
 			</div>
 		</>
 	);

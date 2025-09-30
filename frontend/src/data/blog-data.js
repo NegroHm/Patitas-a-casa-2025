@@ -28,7 +28,7 @@ export const blogData = [
     img: "https://gestion.portalbiesa.com/redaccio/arxius/imatges/201906/770_1560758048blog_post_porque-los-gatos-aranan_y_muerden_cosas_1.jpg",
 		consejo: "Consejo",
 		titulo: "¿Porqué los gatos arañan y muerden cosas?",
-		descripcion: "Si tu gato tiene la costumbre de masticar o arañar algunas prendas u objetos de tu hogar, puede ser por diferentes razones. ¿Por qué los gatos arañan las cosas? Cuando decides adoptar a un gatito...",
+		descripcion: "Si tu gato tiene la costumbre de masticar o arañar algunas prendas u objetos de tu hogar, puede ser por diferentes razones. ¿Por qué los gatos arañan las cosas? Cuando decides cuidar a un gatito...",
 		fecha: "17/06/2019 10:03"
   },
   {
@@ -84,7 +84,7 @@ export const blogData = [
     img: "https://gestion.portalbiesa.com/redaccio/arxius/imatges/201906/770_1560758048blog_post_porque-los-gatos-aranan_y_muerden_cosas_1.jpg",
 		consejo: "Consejo",
 		titulo: "¿Porqué los gatos arañan y muerden cosas?",
-		descripcion: "Si tu gato tiene la costumbre de masticar o arañar algunas prendas u objetos de tu hogar, puede ser por diferentes razones. ¿Por qué los gatos arañan las cosas? Cuando decides adoptar a un gatito...",
+		descripcion: "Si tu gato tiene la costumbre de masticar o arañar algunas prendas u objetos de tu hogar, puede ser por diferentes razones. ¿Por qué los gatos arañan las cosas? Cuando decides cuidar a un gatito...",
 		fecha: "17/06/2019 10:03"
   },
   {
@@ -140,7 +140,7 @@ export const blogData = [
     img: "https://gestion.portalbiesa.com/redaccio/arxius/imatges/201906/770_1560758048blog_post_porque-los-gatos-aranan_y_muerden_cosas_1.jpg",
 		consejo: "Consejo",
 		titulo: "¿Porqué los gatos arañan y muerden cosas?",
-		descripcion: "Si tu gato tiene la costumbre de masticar o arañar algunas prendas u objetos de tu hogar, puede ser por diferentes razones. ¿Por qué los gatos arañan las cosas? Cuando decides adoptar a un gatito...",
+		descripcion: "Si tu gato tiene la costumbre de masticar o arañar algunas prendas u objetos de tu hogar, puede ser por diferentes razones. ¿Por qué los gatos arañan las cosas? Cuando decides cuidar a un gatito...",
 		fecha: "17/06/2019 10:03"
   },
   {

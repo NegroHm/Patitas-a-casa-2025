@@ -6,14 +6,17 @@ import { sendReportEmail } from '../../config/emailjs';
 
 import styles from './styles.module.css';
 
-import dog from '/icons/imagenes recursos/dog-seating.png';
-import pet from '/icons/imagenes recursos/pet.png';
+// Simple approach - just use the basic public paths and emoji fallback
+const dogImage = '/icons/imagenes recursos/dog-seating.png';
+const petImage = '/icons/imagenes recursos/pet.png';
 
 export const ReporteForm = () => {
   const [petType, setPetType] = useState(true);
   const [formData, setFormData] = useState({});
   const [file, setFile] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [dogImageError, setDogImageError] = useState(false);
+  const [petImageError, setPetImageError] = useState(false);
 
   useEffect(() => {
     setFormData(
@@ -165,13 +168,43 @@ export const ReporteForm = () => {
                 className={petType ? styles.petSelected : styles.pet}
                 onClick={() => setPetType(true)}
               >
-                <img src={dog} alt="dog draw" /> Perdido
+                {!dogImageError ? (
+                  <img 
+                    src={dogImage} 
+                    alt="dog draw"
+                    onError={() => setDogImageError(true)}
+                    style={{ 
+                      width: '20px', 
+                      height: '20px',
+                      marginRight: '8px',
+                      display: 'inline-block'
+                    }}
+                  />
+                ) : (
+                  <span style={{ fontSize: '16px', marginRight: '8px' }}>🔍</span>
+                )}
+                Perdido
               </div>
               <div
                 className={!petType ? styles.petSelected : styles.pet}
                 onClick={() => setPetType(false)}
               >
-                <img src={pet} alt="pet draw" /> Encontrado
+                {!petImageError ? (
+                  <img 
+                    src={petImage} 
+                    alt="pet draw"
+                    onError={() => setPetImageError(true)}
+                    style={{ 
+                      width: '20px', 
+                      height: '20px',
+                      marginRight: '8px',
+                      display: 'inline-block'
+                    }}
+                  />
+                ) : (
+                  <span style={{ fontSize: '16px', marginRight: '8px' }}>🏠</span>
+                )}
+                Encontrado
               </div>
             </div>
           </div>

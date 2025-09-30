@@ -7,7 +7,6 @@ import { FullWithLayout } from "../hocs/layouts/FullWithLayout";
 const Home = lazy(() => import("../containers/pages/Home"))
 const Perdidos = lazy(() => import("../containers/pages/Perdidos"))
 const Encontrados = lazy(() => import("../containers/pages/Encontrados"))
-const Adoptar = lazy(() => import("../containers/pages/Adoptar"))
 const Blog = lazy(() => import("../containers/pages/Blog"))
 const Blogs = lazy(() => import("../containers/pages/Blogs"))
 const Refugios = lazy(() => import("../containers/pages/Refugios"))
@@ -77,10 +76,9 @@ const NotFound = lazy(() => import("../containers/errors/NotFound"))
 
 const AppRouter = () => {
   return (
-    <Routes scrollRestoration="manual">
+    <Routes>
       <Route path="/" element={<FullWithLayout />}>
         <Route index element={<Home />} />
-        <Route path="adoptar" element={<Adoptar />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blogs/:id" element={<Blogs />} />
         <Route path="nosotros" element={<Nosotros />} />

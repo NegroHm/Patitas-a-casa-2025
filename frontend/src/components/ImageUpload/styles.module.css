@@ -1,0 +1,292 @@
+.uploadContainer {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.uploadHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.uploadTitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.uploadDescription {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.dropZone {
+  border: 2px dashed #ddd;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  margin-bottom: 1.5rem;
+}
+
+.dropZone:hover {
+  border-color: #DE341D;
+  background: #fdf2f1;
+}
+
+.dragging {
+  border-color: #DE341D !important;
+  background: #fbeaea !important;
+  transform: scale(1.02);
+}
+
+.dropZoneContent {
+  pointer-events: none;
+}
+
+.uploadIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.dropZoneText {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.dropZoneSubtext {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.selectedFiles {
+  margin-bottom: 1.5rem;
+}
+
+.filesTitle {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.fileItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.fileInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.fileName {
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.25rem;
+}
+
+.fileSize {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.removeButton {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.removeButton:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+.progressContainer {
+  margin-bottom: 1.5rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #DE341D, #B82D1A);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.progressText {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.uploadActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.uploadButton {
+  background: #DE341D;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  box-shadow: 0 2px 6px rgba(222, 52, 29, 0.2);
+}
+
+.uploadButton:hover:not(:disabled) {
+  background: #B82D1A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(222, 52, 29, 0.3);
+}
+
+.uploadButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.clearButton {
+  background: transparent;
+  color: #DE341D;
+  border: 2px solid #DE341D;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clearButton:hover {
+  background: #DE341D;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(222, 52, 29, 0.2);
+}
+
+.apiStatus {
+  text-align: center;
+  padding: 1rem;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.apiStatus p {
+  margin: 0;
+  color: #856404;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .uploadContainer {
+    padding: 1.5rem;
+  }
+  
+  .dropZone {
+    padding: 2rem 1rem;
+  }
+  
+  .uploadIcon {
+    font-size: 2.5rem;
+  }
+  
+  .dropZoneText {
+    font-size: 1rem;
+  }
+  
+  .uploadActions {
+    flex-direction: column;
+  }
+  
+  .uploadButton {
+    min-width: 100%;
+  }
+  
+  .fileItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .removeButton {
+    align-self: flex-end;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .uploadContainer {
+    padding: 1rem;
+  }
+  
+  .uploadTitle {
+    font-size: 1.3rem;
+  }
+  
+  .dropZone {
+    padding: 1.5rem 1rem;
+  }
+  
+  .uploadIcon {
+    font-size: 2rem;
+  }
+}

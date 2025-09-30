@@ -21,30 +21,29 @@ export const AuthProvider = ({ children }) => {
     checkTokenOnLoad();
   }, []);
 
-  // En el AuthProvider
-const login = async (credentials) => {
-  try {
-    const response = await axios.post('/v1/auth/login', credentials);
+  const login = async (credentials) => {
+    try {
+      const response = await axios.post('/v1/auth/login', credentials);
 
-    if (response.status === 200) {
-      const { mytoken } = response.data;
-      localStorage.setItem('token', mytoken);
-      setIsAuthenticated(true);
-      toast.success('Inicio de sesión exitoso', {
-        duration: 2000,
-      });
-      setToken(mytoken);
-      return true
-    } else {
-      console.error('Error en el inicio de sesión:', response.status);
-      return false
+      if (response.status === 200) {
+        const { mytoken } = response.data;
+        localStorage.setItem('token', mytoken);
+        setIsAuthenticated(true);
+        toast.success('Inicio de sesión exitoso', {
+          duration: 2000,
+        });
+        setToken(mytoken);
+        return true;
+      } else {
+        console.error('Error en el inicio de sesión:', response.status);
+        return false;
+      }
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error.response.data.error);
+      toast.error(error.response.data.error);
+      return false;
     }
-  } catch (error) {
-    console.error('Error al iniciar sesión:', error.response.data.error);
-    toast.error(error.response.data.error);
-    return false
-  }
-};
+  };
 
 
   const logout = () => {

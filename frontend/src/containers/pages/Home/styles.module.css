@@ -283,34 +283,6 @@
   }
 }
 
-.adopciones {
-  /* margin: 2rem 0; */
-  padding: 2rem 0;
-  position: relative;
-  margin-bottom: 50px;
-}
-.adopciones::before {
-  content: "";
-  position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 0%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.6;
-}
-
-.adopciones button, p {
-  position: relative;
-}
-
-/* .adopciones>div {
-  margin: 0 43%;
-  margin-bottom: 2rem;
-} */
 
 .publicacion-destacada {
   text-align: center;
